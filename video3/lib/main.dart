@@ -32,6 +32,7 @@ class MyHomePage extends StatelessWidget {
       appBar : AppBar(
         backgroundColor: AppColor.Molachite,
         title: const Text('Flutter Demo'),
+        leading: Icon(Icons.add),//app bar에 아이콘 추가
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.add))
         ],
@@ -108,15 +109,16 @@ class MyHomePage extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: (){},
             ),
-
-
-
-
-
-
           ],
       ),
-      // Stack(
+
+
+      //SingleChildView:수동 스크롤(내용을 눌러야)(
+      //     child: ListBody: ( // 수동 스크롤 (밖에 화면 눌러도 스크롤 됌)
+      //          children: items.map((i) => Text('$i')).toList(),
+      // ))
+
+      // Stack( // 겹치기
       //   alignment: Alignment.center,
       //   children: [
       //     Container(
@@ -142,7 +144,15 @@ class MyHomePage extends StatelessWidget {
       //     ),
       //   ],
       // ),
-      drawer: Drawer(),
+
+      //Column(
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // crossAxisAlignment: CrossAxisAlignment.end,
+      // )
+
+
+
+      drawer: Drawer(), // ---옆에 뭐 나타나는거
     );
   }
 }
